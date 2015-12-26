@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no"> 
+    <title>puzzle</title>
+    <link rel='stylesheet' type='text/css' href='1.css'>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <link href="jquery-ui.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="jquery-ui.min.js"></script>
+    <script type="text/javascript" src="jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="jquery.cookie.js"></script>
+  </head>
+  <body>
+    <div id='background'></div>
+    <div id='congratulation'>
+      <table id='tableCongratulation'>
+        <tr><th>Поздравляем!</th></tr>
+        <tr><td align='center'>Всего кусочков:<output type="text" id='puzPiece'></output></td></tr>
+        <tr><td align='center'>Время:<output type="text" id='mintime'></output>:<output type="text" id='sectime'></output></td></tr>
+        <tr><td align='center'><input type="text" id="Name">   <input type="button" id="sendRecord" value="Отправить" onclick="send()"></td></tr>
+        <tr><th>Рекорды</th></tr>
+        <tr><td><div id='RecordContainer'></div></td></tr>
+        <tr><th><input type="button" id='restart' value="Новая игра" onclick="restart()" style="cursor: pointer;"></th></tr>
+      </table>
+    </div>
+    <div id='settings'>
+<!-- тег input type='file' onchange="название_функции(this.value);-->
+      <table>
+        <tr>
+          <td align="right" width="50px" rowspan='2'><label><img src="file_upload.png" onclick="document.getElementById('file')" style="width:50px;cursor:pointer;"><input type="file" id="file" style="display: none" onchange="start(this.files)"></label></td>
+          <td align="right">Ряды:</td>
+          <td align='left'><div id='rows' style='width:130px'></div></td>
+          <td align="left" width="50px" rowspan='2'><label><input type="checkbox" id="rotation" style="display: none" checked><span></span></label></td>
+        </tr>
+        <tr>
+          <td align='right'>Столбцы:</td>
+          <td align='left'><div id='cols' style='width:130px'></div></td>
+        </tr>
+      </table> 
+    </div>
+    <div id='game'>
+      <div id='image'>
+        <img id='img'>
+      </div>
+    </div>
+    <script type="text/javascript" src="forhtml.js"></script>
+  </body>
+</html>
