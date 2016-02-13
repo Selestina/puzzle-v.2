@@ -4,12 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no"> 
     <title>puzzle</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel='stylesheet' type='text/css' href='1.css'>
     <script type="text/javascript" src="jquery.min.js"></script>
     <link href="jquery-ui.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="jquery-ui.min.js"></script>
     <script type="text/javascript" src="jquery.ui.touch-punch.min.js"></script>
     <script type="text/javascript" src="jquery.cookie.js"></script>
+  <script type="text/javascript" src="jqjigsawpuzzle.js"></script>
   </head>
   <body>
     <div id='background'></div>
@@ -29,13 +31,13 @@
       <table>
         <tr>
           <td align="right" width="50px" rowspan='2'><label><img src="file_upload.png" onclick="document.getElementById('file')" style="width:50px;cursor:pointer;"><input type="file" id="file" style="display: none" onchange="start(this.files)"></label></td>
-          <td align="right">Ряды:</td>
-          <td align='left'><div id='rows' style='width:130px'></div></td>
+          <td align="right"><label id='rowscount'>84</label></td>
+          <td align='left'><div id='rows' style='width:160px; margin-left:10px'></div></td>
           <td align="left" width="50px" rowspan='2'><label><input type="checkbox" id="rotation" style="display: none" checked><span></span></label></td>
         </tr>
         <tr>
-          <td align='right'>Столбцы:</td>
-          <td align='left'><div id='cols' style='width:130px'></div></td>
+          <!--<td align='right'>Столбцы:<label id='colscount'></label></td>
+          <td align='left'><div id='cols' style='width:130px'></div></td>-->
         </tr>
       </table> 
     </div>
@@ -44,6 +46,24 @@
         <img id='img'>
       </div>
     </div>
+  <div style='display:none'>
+  <img src='/masks/0000.png' id=0000>
+  <img src='/masks/0001.png' id=0001>
+  <img src='/masks/0010.png' id=0010>
+  <img src='/masks/0011.png' id=0011>
+  <img src='/masks/0100.png' id=0100>
+  <img src='/masks/0101.png' id=0101>
+  <img src='/masks/0110.png' id=0110>
+  <img src='/masks/0111.png' id=0111>
+  <img src='/masks/1000.png' id=1000>
+  <img src='/masks/1001.png' id=1001>
+  <img src='/masks/1010.png' id=1010>
+  <img src='/masks/1011.png' id=1011>
+  <img src='/masks/1100.png' id=1100>
+  <img src='/masks/1101.png' id=1101>
+  <img src='/masks/1110.png' id=1110>
+  <img src='/masks/1111.png' id=1111>
+  </div>
     <script type="text/javascript" src="forhtml.js"></script>
   </body>
 </html>

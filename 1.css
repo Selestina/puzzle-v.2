@@ -90,6 +90,9 @@ input[type="text"] {
     top:0;
     left:0;
     overflow: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 #settings{
   position:absolute;
